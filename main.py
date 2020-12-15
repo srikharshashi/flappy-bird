@@ -93,7 +93,7 @@ bird_surface = pygame.image.load('redbird-midflap.png')
 bird_rect = bird_surface.get_rect(center=(150, 122))
 
 # Game Variables
-gravity = 0.38
+gravity = 0.25
 
 bird_movement = 0
 game_active = True
@@ -124,7 +124,7 @@ while run:
         if event.type == pygame.KEYDOWN:
             if event.key == pygame.K_SPACE or event.key == pygame.K_UP or event.key == pygame.K_w:
                 bird_movement = 0
-                bird_movement -= 5
+                bird_movement -= 6
                 flap_sound.play()
             if event.key == pygame.K_SPACE and game_active == False:
                 game_active = True
