@@ -164,4 +164,4 @@ while run:
     fx -= 1
 
     pygame.display.update()
-    fpsclock.tick(75)
+    fpsclock.tick(60)
