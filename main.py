@@ -86,6 +86,8 @@ bg = pygame.image.load('bg-r.png')
 base = pygame.image.load('base.png')
 game_font = pygame.font.Font('04B_19.TTF', 20)
 game_font_2 = pygame.font.Font('04B_19.TTF', 10)
+game_font_3 = pygame.font.Font('04B_19.TTF', 11)
+
 message=pygame.image.load("text.png")
 message_rect=message.get_rect(center=(150,250))
 # Player Essentials
@@ -153,8 +155,12 @@ while run:
         score_display(1)
     else:
         SCREEN.blit(message,message_rect)
+        msg_surface = game_font_3.render((" Use Space to start and Jump through the obstacles"), True, (255, 255, 255))
+        msg_rect = msg_surface.get_rect(center=(150, 390))
+        SCREEN.blit(msg_surface, msg_rect)
         high_score = update_score(score,high_score)
         score_display(-1)
+
 
     # Bases
     SCREEN.blit(base, (fx, 488))
