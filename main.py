@@ -70,7 +70,7 @@ def pipe_score_check():
     global can_score
     if pipe_list:
         for pipe in pipe_list:
-            if 147<pipe.centerx<153 and can_score:
+            if 144<pipe.centerx<150 and can_score:
                 score+=1
                 point_sound.play()
                 can_score=False
